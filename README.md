@@ -30,21 +30,37 @@ Find out the ip address of the attackers system
 <img width="676" height="373" alt="image" src="https://github.com/user-attachments/assets/feb75783-e8e9-40e3-aac8-144c043462bb" />
 
 
+This image shows the output of the ifconfig command on a Kali Linux system.
+The eth0 network interface is active with the IP address 192.168.129.128.
+It displays network details such as MAC address, IPv6 address, packet statistics, and MTU size.
+The lo loopback interface is also shown, which is used for internal communication within the system.
+
 Invoke msfconsole:
 ## OUTPUT:
 
 <img width="917" height="857" alt="image" src="https://github.com/user-attachments/assets/55fa108a-14f0-474f-8f34-6cb61eee1290" />
 
-Type help or a question mark "?" to see the list of all available commands you can use inside msfconsole.
+
+This image shows the startup screen of the Metasploit Framework in Kali Linux.
+The msfconsole command is used to launch the Metasploit penetration testing tool.
+It displays framework information including the number of exploits, payloads, and auxiliary modules available.
+The screen also contains ASCII art and documentation details related to Metasploit.
 
 
 <img width="1112" height="842" alt="image" src="https://github.com/user-attachments/assets/e7cf70b7-e617-4453-b7e2-c9358c66d1d7" />
+
+This image displays the help command output inside the Metasploit console.
+It lists core commands such as connect, sessions, set, and exit with their descriptions.
+The output also includes module commands used for managing exploits and payloads.
+This help menu assists users in understanding and navigating Metasploit features effectively.
 
 
 Port Scanning:
 Following command is executed for scanning the systems on our local area network with a TCP scan (-sT) looking for open ports between 1 and 1000 (-p1-1000).
 msf >  nmap -sT 192.168.1810/24 -p1-1000  (Replace with appropriate IP Address)
 ## OUTPUT:
+
+
 
 step4:
 use the db-nmap command to scan and save the results into Metasploit's postgresql attached database. In that way, you can use those results in the exploitation stage later.
@@ -62,9 +78,12 @@ kali > ls -l
 
 
 
+
 Search is a powerful command in Metasploit that you can use to find what you want to locate. 
 msf >search name:Microsoft type:exploit
 ## OUTPUT:
+
+
 
 
 
@@ -78,15 +97,21 @@ msfdb init
 
 
 
+
+
 ## MYSQL ENUMERATION
 Find the IP address of the Metasploitable machine first. Then, use the db_nmap command in msfconsole with Nmap flags to scan the MySQL database at 3306 port.
 db_nmap -sV -sC -p 3306 <metasploitable_ip_address>
 
 ## OUTPUT:
 
+
+
 Use the search option to look for an auxiliary module to scan and enumerate the MySQL database.
 search type:auxiliary mysql
 ## OUTPUT:
+
+
 
 
 use the auxiliary/scanner/mysql/mysql_version module by typing the module name or associated number to scan MySQL version details.
