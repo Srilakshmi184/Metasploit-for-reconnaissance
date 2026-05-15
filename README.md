@@ -113,6 +113,11 @@ msf >search name:Microsoft type:exploit
 
 <img width="319" height="360" alt="Screenshot 2026-05-15 131612" src="https://github.com/user-attachments/assets/4fe3756b-9523-4748-9c54-b08bf7233bf1" />
 
+Search lists exploits for Microsoft products.
+Targets include Windows 2000, XP, and 2003.
+Modules cover IIS and ARCServe vulnerabilities.
+Each entry specifies supported service packs.
+
 
 
 The info command provides information regarding a module or platform,
@@ -125,6 +130,10 @@ msfdb init
 
 <img width="326" height="334" alt="Screenshot 2026-05-15 131650" src="https://github.com/user-attachments/assets/a48f30a2-03b9-44ee-a9c3-3ff60e285462" />
 
+MS10‑065 exploits IIS 5 NTFS streams.
+Rank is normal, disclosed July 2010.
+Options include RHOSTS, RPORT, SSL, TARGETURI.
+Bypasses basic authentication on IIS servers.
 
 
 
@@ -137,6 +146,10 @@ db_nmap -sV -sC -p 3306 <metasploitable_ip_address>
 <img width="361" height="74" alt="Screenshot 2026-05-15 131702" src="https://github.com/user-attachments/assets/86119ac8-43c1-4bba-a0a0-21516c64a741" />
 
 
+Scan targets port 3306 on 192.168.152.128.
+Host confirmed alive during detection.
+Port state shows as filtered (blocked).
+Service identified as MySQL, scan completed.
 
 
 Use the search option to look for an auxiliary module to scan and enumerate the MySQL database.
@@ -147,6 +160,10 @@ search type:auxiliary mysql
 <img width="452" height="344" alt="Screenshot 2026-05-15 131744" src="https://github.com/user-attachments/assets/81af802c-6278-4027-a600-da1347a4d93c" />
 
 
+Search lists modules for MySQL testing.
+Includes login, hashdump, schemadump, and capture.
+Modules support brute force and enumeration.
+Useful for SQL injection and password analysis.
 
 
 use the auxiliary/scanner/mysql/mysql_version module by typing the module name or associated number to scan MySQL version details.
@@ -158,6 +175,10 @@ use auxiliary/scanner/mysql/mysql_version
 
 <img width="446" height="197" alt="Screenshot 2026-05-15 131826" src="https://github.com/user-attachments/assets/a5966acc-e84b-468c-af6d-81f4ff8a0041" />
 
+Module scanner/mysql/mysql_version is loaded.
+Can target either a SESSION or RHOSTS.
+Default port set to 3306 with threads = 1.
+Used to detect MySQL server version remotely.
 
 
 
@@ -166,6 +187,10 @@ Use the set rhosts command to set the parameter and run the module, as follows:
 
 <img width="303" height="56" alt="Screenshot 2026-05-15 131908" src="https://github.com/user-attachments/assets/3a21e9ad-cc35-462d-84d4-a4299328fff2" />
 
+Target set to 192.168.152.128.
+Scan runs against port 3306.
+Host scanned fully, 1 of 1 complete.
+Execution finished without crash or errors.
 
 
 After scanning, you can also brute force MySQL root account via Metasploit's auxiliary(scanner/mysql/mysql_login) module.
@@ -174,7 +199,10 @@ After scanning, you can also brute force MySQL root account via Metasploit's aux
 
 <img width="458" height="292" alt="Screenshot 2026-05-15 132028" src="https://github.com/user-attachments/assets/9efbcd55-4332-4e1b-8950-3b93b933c09a" />
 
-
+Module scanner/mysql/mysql_login is configured.
+Supports blank passwords and wordlists.
+Bruteforce speed adjustable from 0–5.
+Can stop on success or continue scanning.
 
 
 set the PASS_FILE parameter to the wordlist path available inside /usr/share/wordlists:
@@ -187,6 +215,10 @@ set BLANK_PASSWORDS true
 
 <img width="460" height="95" alt="Screenshot 2026-05-15 132752" src="https://github.com/user-attachments/assets/3936d6ab-ab2f-4c74-b06a-ca70995d27b3" />
 
+Wordlist set to rockyou.txt.gz.
+Target host defined as 192.168.152.128.
+Blank passwords enabled, verbose disabled.
+One credential successfully discovered.
 
 
 
