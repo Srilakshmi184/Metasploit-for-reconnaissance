@@ -27,32 +27,19 @@ Open terminal and try execute some kali linux commands
 Find out the ip address of the attackers system
 ## OUTPUT:
 
-<img width="676" height="373" alt="image" src="https://github.com/user-attachments/assets/feb75783-e8e9-40e3-aac8-144c043462bb" />
+<img width="346" height="168" alt="Screenshot 2026-05-15 123107" src="https://github.com/user-attachments/assets/2c44548b-5650-417b-9d49-e7d4522be43f" />
 
-
-This image shows the output of the ifconfig command on a Kali Linux system.
-The eth0 network interface is active with the IP address 192.168.129.128.
-It displays network details such as MAC address, IPv6 address, packet statistics, and MTU size.
-The lo loopback interface is also shown, which is used for internal communication within the system.
 
 Invoke msfconsole:
 ## OUTPUT:
 
-<img width="917" height="857" alt="image" src="https://github.com/user-attachments/assets/55fa108a-14f0-474f-8f34-6cb61eee1290" />
+<img width="380" height="310" alt="Screenshot 2026-05-15 123142" src="https://github.com/user-attachments/assets/9141034c-fbc7-461e-bbcd-786e136da48a" />
 
 
-This image shows the startup screen of the Metasploit Framework in Kali Linux.
-The msfconsole command is used to launch the Metasploit penetration testing tool.
-It displays framework information including the number of exploits, payloads, and auxiliary modules available.
-The screen also contains ASCII art and documentation details related to Metasploit.
+<img width="475" height="350" alt="Screenshot 2026-05-15 123153" src="https://github.com/user-attachments/assets/b40527f5-284f-4b7c-892e-3c023fbe5756" />
 
 
-<img width="1112" height="842" alt="image" src="https://github.com/user-attachments/assets/e7cf70b7-e617-4453-b7e2-c9358c66d1d7" />
 
-This image displays the help command output inside the Metasploit console.
-It lists core commands such as connect, sessions, set, and exit with their descriptions.
-The output also includes module commands used for managing exploits and payloads.
-This help menu assists users in understanding and navigating Metasploit features effectively.
 
 
 Port Scanning:
@@ -60,6 +47,8 @@ Following command is executed for scanning the systems on our local area network
 msf >  nmap -sT 192.168.1810/24 -p1-1000  (Replace with appropriate IP Address)
 ## OUTPUT:
 
+
+<img width="350" height="218" alt="Screenshot 2026-05-15 124010" src="https://github.com/user-attachments/assets/73281db8-3b6a-4006-ba6b-f31bcf1f7a6f" />
 
 
 step4:
@@ -70,11 +59,17 @@ msf > db_nmap 192.168.181.0/24
 ## OUTPUT:
 
 
+<img width="587" height="59" alt="Screenshot 2026-05-15 124153" src="https://github.com/user-attachments/assets/49d0d0e8-9d17-4de4-9ccb-796587e09534" />
+
+
 
 Metasploit has a multitude of scanning modules built in. If we open another terminal, we can navigate to Metasploit's auxiliary modules and list all the scanner modules.
 cd /usr/share /metasploit-framework/modules/auxiliary
 kali > ls -l
 ## OUTPUT:
+
+<img width="291" height="200" alt="Screenshot 2026-05-15 131543" src="https://github.com/user-attachments/assets/7f5884bc-055e-4231-8364-b6320dfa141d" />
+
 
 
 
@@ -84,6 +79,7 @@ msf >search name:Microsoft type:exploit
 ## OUTPUT:
 
 
+<img width="319" height="360" alt="Screenshot 2026-05-15 131612" src="https://github.com/user-attachments/assets/4fe3756b-9523-4748-9c54-b08bf7233bf1" />
 
 
 
@@ -95,6 +91,7 @@ msfdb init
 ## OUTPUT:
 
 
+<img width="326" height="334" alt="Screenshot 2026-05-15 131650" src="https://github.com/user-attachments/assets/a48f30a2-03b9-44ee-a9c3-3ff60e285462" />
 
 
 
@@ -105,11 +102,17 @@ db_nmap -sV -sC -p 3306 <metasploitable_ip_address>
 
 ## OUTPUT:
 
+<img width="361" height="74" alt="Screenshot 2026-05-15 131702" src="https://github.com/user-attachments/assets/86119ac8-43c1-4bba-a0a0-21516c64a741" />
+
+
 
 
 Use the search option to look for an auxiliary module to scan and enumerate the MySQL database.
 search type:auxiliary mysql
 ## OUTPUT:
+
+
+<img width="452" height="344" alt="Screenshot 2026-05-15 131744" src="https://github.com/user-attachments/assets/81af802c-6278-4027-a600-da1347a4d93c" />
 
 
 
@@ -121,15 +124,23 @@ use auxiliary/scanner/mysql/mysql_version
 ## OUTPUT:
 
 
+<img width="446" height="197" alt="Screenshot 2026-05-15 131826" src="https://github.com/user-attachments/assets/a5966acc-e84b-468c-af6d-81f4ff8a0041" />
+
+
 
 
 Use the set rhosts command to set the parameter and run the module, as follows:
 ## OUTPUT:
 
+<img width="303" height="56" alt="Screenshot 2026-05-15 131908" src="https://github.com/user-attachments/assets/3a21e9ad-cc35-462d-84d4-a4299328fff2" />
+
 
 
 After scanning, you can also brute force MySQL root account via Metasploit's auxiliary(scanner/mysql/mysql_login) module.
 ## OUTPUT:
+
+
+<img width="458" height="292" alt="Screenshot 2026-05-15 132028" src="https://github.com/user-attachments/assets/9efbcd55-4332-4e1b-8950-3b93b933c09a" />
 
 
 
@@ -142,6 +153,7 @@ Set BLANK_PASSWORDS to true in case there is no password set for the root accoun
 set BLANK_PASSWORDS true
 ## OUTPUT:
 
+<img width="460" height="95" alt="Screenshot 2026-05-15 132752" src="https://github.com/user-attachments/assets/3936d6ab-ab2f-4c74-b06a-ca70995d27b3" />
 
 
 
