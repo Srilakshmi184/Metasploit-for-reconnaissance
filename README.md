@@ -1,4 +1,6 @@
 # Metasploit-for-reconnaissance
+# NAME-SRILAKSHMI BH
+# REG.NO-212224100057
 # Metasploit
 Metasploit for reconnaissance in pentesting
 
@@ -25,14 +27,18 @@ Open terminal and try execute some kali linux commands
 Find out the ip address of the attackers system
 ## OUTPUT:
 
+<img width="676" height="373" alt="image" src="https://github.com/user-attachments/assets/feb75783-e8e9-40e3-aac8-144c043462bb" />
+
 
 Invoke msfconsole:
 ## OUTPUT:
 
+<img width="917" height="857" alt="image" src="https://github.com/user-attachments/assets/55fa108a-14f0-474f-8f34-6cb61eee1290" />
 
 Type help or a question mark "?" to see the list of all available commands you can use inside msfconsole.
 
 
+<img width="1112" height="842" alt="image" src="https://github.com/user-attachments/assets/e7cf70b7-e617-4453-b7e2-c9358c66d1d7" />
 
 
 Port Scanning:
