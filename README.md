@@ -29,14 +29,31 @@ Find out the ip address of the attackers system
 
 <img width="346" height="168" alt="Screenshot 2026-05-15 123107" src="https://github.com/user-attachments/assets/2c44548b-5650-417b-9d49-e7d4522be43f" />
 
+Shows network interfaces eth0 and lo.
+eth0 has IP 192.168.152.128 with MAC 00:0c:29:2f:45:b0.
+Loopback lo uses 127.0.0.1 for local traffic.
+No errors, drops, or collisions reported.
+
 
 Invoke msfconsole:
 ## OUTPUT:
 
 <img width="380" height="310" alt="Screenshot 2026-05-15 123142" src="https://github.com/user-attachments/assets/9141034c-fbc7-461e-bbcd-786e136da48a" />
 
+Metasploit launches with its signature ASCII art.
+Version 6.4.116‑dev loads exploits, payloads, modules.
+Over 2,600 exploits and 1,700 payloads available.
+Framework maintained as an open‑source Rapid7 project.
+
 
 <img width="475" height="350" alt="Screenshot 2026-05-15 123153" src="https://github.com/user-attachments/assets/b40527f5-284f-4b7c-892e-3c023fbe5756" />
+
+Help lists core commands like set, sessions, exit.
+Supports plugins, routing, and variable management.
+History and tips improve productivity in console use.
+Version info available with version command.
+
+
 
 
 
@@ -50,6 +67,11 @@ msf >  nmap -sT 192.168.1810/24 -p1-1000  (Replace with appropriate IP Address)
 
 <img width="350" height="218" alt="Screenshot 2026-05-15 124010" src="https://github.com/user-attachments/assets/73281db8-3b6a-4006-ba6b-f31bcf1f7a6f" />
 
+Scan targets 192.168.152.128/24 range.
+Four VMware hosts detected as alive.
+Ports mostly filtered or closed.
+Latency shows quick responses under milliseconds.
+
 
 step4:
 use the db-nmap command to scan and save the results into Metasploit's postgresql attached database. In that way, you can use those results in the exploitation stage later.
@@ -61,6 +83,11 @@ msf > db_nmap 192.168.181.0/24
 
 <img width="587" height="59" alt="Screenshot 2026-05-15 124153" src="https://github.com/user-attachments/assets/49d0d0e8-9d17-4de4-9ccb-796587e09534" />
 
+Focused on port 3306 with db_nmap.
+Host 192.168.152.128 confirmed active.
+Port state shows as filtered (blocked).
+Firewall prevents service detection results.
+
 
 
 Metasploit has a multitude of scanning modules built in. If we open another terminal, we can navigate to Metasploit's auxiliary modules and list all the scanner modules.
@@ -69,6 +96,11 @@ kali > ls -l
 ## OUTPUT:
 
 <img width="291" height="200" alt="Screenshot 2026-05-15 131543" src="https://github.com/user-attachments/assets/7f5884bc-055e-4231-8364-b6320dfa141d" />
+
+Lists Metasploit auxiliary module folders.
+Categories include admin, sql, spoof, fuzzers.
+Two sample files: example.rb and example.py.
+Shows extensible structure for scanning and exploitation.
 
 
 
